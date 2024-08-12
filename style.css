@@ -1,0 +1,248 @@
+* {
+     margin: 0%;
+     padding: 0%;
+     box-sizing: border-box;
+}
+
+:root {
+     --background-color: #FFFDD0;
+     --gray-color: #333;
+     --black-color: rgba(0, 0, 0, 0.5);
+     --darkBlack-color: rgba(255, 255, 255, 0);
+     --white-color: #fff;
+     --tomato-color: tomato;
+     --Light-color: blue;
+}
+
+.flex {
+     display: flex;
+     align-items: center;
+}
+
+#wrapper {
+     height: 100vh;
+     overflow-x: hidden;
+     overflow-y: auto;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: var(--background-color);
+}
+
+#container {
+     max-width: 1180px;
+     margin-inline: auto;
+     overflow: hidden;
+}
+
+nav {
+     margin-top: 16px;
+     padding: 16px;
+     justify-content: space-between;
+     border-radius: 32px;
+     background-color: rgb(253, 192, 170);
+}
+
+.LoadingContainer {
+     flex-direction: column;
+     justify-content: center;
+}
+
+.loadingIMG {
+     max-width: 80px;
+     max-height: 80px;
+}
+
+.loading-container {
+     flex-direction: column;
+     display: none;
+}
+
+.loading-container.active {
+     display: flex;
+}
+
+.loading-container p {
+     text-transform: uppercase;
+}
+
+.ErrorImageContainer {
+     flex-direction: column;
+}
+
+/* Errer image show */
+.ErrerImage {
+     display: none;
+}
+
+.ErrerImage.active { 
+     width: 16%;
+     height: 10%;
+     display: flex;
+
+}
+
+.navIcon {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: bold;
+     font-style: italic;
+     font-size: x-large;
+}
+
+.navIcon {
+     transition: all 0.2s ease-in-out;
+}
+
+.navIcon:hover {
+     scale: 0.8;
+}
+
+.navMenu {
+     gap: 16px;
+
+}
+
+ul {
+     list-style: none;
+}
+
+
+.navItem {
+     transition: all 0.2s ease-in-out;
+}
+
+.navItem:hover {
+     cursor: pointer;
+     transform: translateY(-5px);
+     color: cornflowerblue;
+}
+
+.navItem.active {
+     color: blue;
+}
+
+
+
+
+.text :hover {
+     opacity: 0.5;
+}
+
+.searchBar {
+     gap: 10px;
+}
+
+.inputError {
+     display: none;
+}
+
+.inputError.active {
+     display: flex;
+     color: red;
+}
+
+.inputRightWordError {
+     display: none;
+}
+
+.inputRightWordError.active {
+     display: flex;
+     color: orangered;
+}
+
+input {
+     width: 200px;
+     height: 50%;
+     border-radius: 8px;
+     padding-block: 8px;
+     border: none;
+     text-align: center;
+     outline: none;
+}
+
+input[type=text]:focus {
+     font-size: 1rem;
+     border: 0.5px solid #555;
+     transition: all 0.3s ease-in-out;
+}
+
+input:active {
+     scale: 0.9;
+}
+
+.SearchBtn {
+     width: 100px;
+     height: 50%;
+     padding: 8px 24px;
+     border: none;
+     border-radius: 8px;
+     box-shadow: 1px 1px 5px;
+     cursor: pointer;
+     background-color: blue;
+     color: white;
+     transition: all 0.2s ease;
+}
+
+.SearchBtn:hover {
+     scale: 0.9;
+     cursor: pointer;
+     background-color: rgb(32, 136, 255);
+}
+
+
+main {
+     padding-block: 20px;
+     margin-top: 80px;
+}
+
+.CardContainer {
+     justify-content: space-between;
+     flex-wrap: wrap;
+     row-gap: 20px;
+     align-items: start;
+}
+
+h6 {
+     color: rgb(194, 65, 93);
+}
+
+.Card {
+     width: 360px;
+     max-height: 350px;
+     min-height: 400px;
+     flex-direction: column;
+     gap: 10px;
+     box-shadow: 0 0 4px #1364a7;
+     border-radius: 4px;
+     cursor: pointer;
+     background-color: #fff;
+     overflow: hidden;
+     transition: all 0.2s ease;
+}
+
+.Card:hover {
+     box-shadow: 1px 1px 8px #d4ecff;
+     background-color: #f9fdff;
+     transform: translateY(-5px);
+}
+
+
+.CardHeader:hover {
+     transform: scale(1.08);
+     transition: 0.5s;
+}
+
+.CardHeader,
+img {
+     width: 100%;
+     height: 180px;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.CardContent {
+     padding: 16px;
+     flex-direction: column;
+     align-items: start;
+     gap: 10px;
+     line-height: 1.5rem;
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>News WebSite</title>
+     <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+     <section id="wrapper">
+          <section id="container">
+               <nav class="flex">
+                    <div class="navIcon text">
+                         <a href="#" onclick="reload()">
+                              <i class="fa-solid fa-newspaper"></i>
+                              <span>NEWS</span>
+                         </a>
+
+                    </div>
+
+                    <ul class="navMenu flex text">
+                         <li class="navItem" id="ipl" onclick="onNavItemClick('ipl')">
+                              IPL
+                         </li>
+
+                         <li class="navItem" id="finance" onclick="onNavItemClick('finance')">
+                              Finance
+                         </li>
+
+                         <li class="navItem" id="politics" onclick="onNavItemClick('politics')">
+                              Politics
+                         </li>
+                    </ul>
+
+                    <div class="searchBar flex">
+                         <input id="SearchText" type="text" placeholder="e.g. Science">
+                         <span class="inputError">Pleace Fill InputBox !</span>
+                         <span class="inputRightWordError">Fill Right Word !</span>
+                         <button id="SearchButton" class="SearchBtn">Search</button>
+                    </div>
+               </nav>
+
+               <!--- loading screen container -->
+               <section class="LoadingContainer flex">
+                   <section class="loading-container flex">
+                    <img class="loadingIMG" src="./assets/loading.gif" alt="loading" width="50px" height="50px">
+                    <p>Loading...</p>
+                   </section>
+
+                   <section class="ErrorImageContainer flex">
+                    <!-- show Errer image -->
+                    <img class="ErrerImage" src="./assets/not-found.png" alt="not-found">
+                    <p></p>
+                   </section>
+
+               </section>
+               
+              
+               <main>
+
+                    <div class="CardContainer container flex" id="CardContainer">
+
+                    </div>
+               </main>
+
+               <template id="TemplateNewsCard">
+                    <!-- Card-->
+                    <div class="Card flex">
+                         <div class="CardHeader">
+                              <img src="/assets/not-found.png" alt="NewsImage" id="newsImg">
+                         </div>
+                         <div class="CardContent flex">
+                              <h3 id="NewsTitle">This is the Title</h3>
+                              <h6 id="NewsSource">peragraph</h6>
+                              <p id="NewsDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+                                   reprehenderit mollitia odit excepturi inventore numquam, voluptate libero hic,
+                                   ipsa provident pariatur fugiat veritatis magnam expedita consectetur minima
+                                   laboriosam totam atque.
+                                   Eius, eaque quod aspernatur vitae debitis iste laborum ex, maiores velit
+                                   eligendi, unde id odio! Rerum excepturi nesciunt vitae atque quibusdam harum.
+                                   Provident, animi vel deleniti delectus nobis quidem harum?</p>
+                         </div>
+                    </div>
+               </template>
+          </section>
+     </section>
+
+
+     <!-- 
+    - font Awesome 
+     -->
+     <script src="https://kit.fontawesome.com/dc63517f38.js" crossorigin="anonymous"></script>
+
+     <!-- 
+     -  JS file
+     -->
+     <script src="./script.js"></script>
+</body>
+
+</html>
